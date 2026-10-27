@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact Antreo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Get in touch with Antreo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@500;600;700&display=swap"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Antreo home"><img class="logo-dark" src="img/logo.png" alt="Antreo" width="600" height="141"><img class="logo-light" src="img/logo-light.png" alt="Antreo" width="600" height="141"></a><ul class="links"><li><a href="platform.html">Platform</a></li><li><a href="who-its-for.html">Who it's for</a></li><li><a href="partners.html">Partners</a></li><li><a href="about.html">About</a></li><li><a class="btn btn-primary" href="contact.html">Talk to us</a></li></ul><details class="menu"><summary>Menu</summary><ul><li><a href="index.html">Home</a></li><li><a href="platform.html">Platform</a></li><li><a href="who-its-for.html">Who it's for</a></li><li><a href="partners.html">Partners</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></details></div></header>
+<main>
+
+<section class="page-hero"><div class="wrap">
+<span class="eyebrow">Contact</span>
+<h1>Talk to Antreo</h1>
+<p class="lede">Whether you report, supply or run a financial platform, we'd like to hear how you handle ESG data today.</p>
+</div></section>
+<section class="section"><div class="wrap split" style="align-items:start">
+<div class="copy">
+<h2>How can we help?</h2>
+<p class="lede">Tell us a little about your organisation and we'll get back to you.</p>
+<div class="grid" style="gap:14px">
+<div class="card value"><span class="ic-badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-6M3 20h18"/></svg></span><div><h3>See Antreo with your data</h3><p>Find out what Antreo can produce from your payments and invoices.</p></div></div>
+<div class="card value"><span class="ic-badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5"/></svg></span><div><h3>Discuss an integration</h3><p>For treasury, ERP, invoicing, payment and banking platforms.</p></div></div>
+</div>
+</div>
+<form class="form card" id="contact-form" novalidate>
+<div class="row2"><div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+<div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div></div>
+<div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="f-type">I am a</label><select id="f-type" name="type"><option>Reporting company</option><option>Supplier</option><option>Platform, bank or potential partner</option><option>Other</option></select></div>
+<div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+<div><button class="btn btn-primary" type="submit">Send message</button></div>
+<p class="notice" id="f-status" hidden></p>
+</form>
+</div></section>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var s = document.getElementById("f-status"), n = document.getElementById("f-name"), m = document.getElementById("f-email");
+  if (!n.value.trim() || !m.value.includes("@")) { s.textContent = "Please add your name and a valid work email."; s.hidden = false; return; }
+  s.textContent = "Preview only: this form isn't connected to an inbox yet, so nothing was sent.";
+  s.hidden = false;
+});
+</script>
+
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot">
+<div><a class="brand" href="index.html" aria-label="Antreo home"><img class="logo-dark" src="img/logo.png" alt="Antreo" width="600" height="141"><img class="logo-light" src="img/logo-light.png" alt="Antreo" width="600" height="141"></a>
+<p style="max-width:38ch">Trusted environmental data from the payments and invoices your business already makes.</p></div>
+<div><h4>Product</h4><ul><li><a href="platform.html">Platform</a></li><li><a href="platform.html#how-it-works">How it works</a></li><li><a href="platform.html#connect">Integrations</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="who-its-for.html">Who it's for</a></li><li><a href="partners.html">Partners</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+</div>
+<div class="legal"><span>&copy; 2026 Antreo. All rights reserved.</span><span>ESG intelligence for financial flows</span></div>
+</div></footer>
+</body>
+</html>
